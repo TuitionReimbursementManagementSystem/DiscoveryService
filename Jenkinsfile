@@ -4,7 +4,7 @@ pipeline {
         AWS_REGION = 'us-east-2'
         ECR_REPOSITORY = 'trms/discovery'
         IMAGE_TAG = "${GIT_COMMIT}" // Using the commit hash as the image tag
-        KUBE_CONFIG = credentials('your-kube-config-credential-id') // Jenkins credentials ID for Kube config
+        KUBE_CONFIG = credentials('your-kube-config-id') // Jenkins credentials ID for Kube config
     }
     stages {
         stage('Checkout') {
